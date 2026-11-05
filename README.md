@@ -1,116 +1,121 @@
 # Funny Clipper — Official Legal & Documentation Website
 
-This repository hosts the official static legal and developer documentation website for **Funny Clipper**, an automated video clipping application.
+This repository hosts the official static legal and developer documentation website for **Funny Clipper**, an automated video clipping application developed and maintained by **Moh Fahmi Muzaki**.
 
-The site is configured for direct public hosting on **GitHub Pages** and serves as the official **Terms of Service URL** and **Privacy Policy URL** for the **TikTok for Developers** application review process.
+The site is hosted publicly via **GitHub Pages** and serves as the official **Terms of Service URL** and **Privacy Policy URL** for third-party developer reviews, including the **TikTok for Developers** application review and **Google / YouTube API Services verification**.
 
 ---
 
 ## 1. Live URLs (GitHub Pages)
 
-Once deployed to GitHub Pages on this repository, the canonical public URLs are:
-
-| Page | URL |
-|---|---|
-| **Homepage** | `https://muzzacky04.github.io/funny-clipper/` |
-| **Terms of Service** | `https://muzzacky04.github.io/funny-clipper/terms.html` |
-| **Privacy Policy** | `https://muzzacky04.github.io/funny-clipper/privacy.html` |
-
-*(If using a different GitHub account, replace `muzzacky04` with your GitHub username).*
+| Page | URL | Status |
+|---|---|---|
+| **Homepage** | [https://muzzacky04.github.io/funny-clipper/](https://muzzacky04.github.io/funny-clipper/) | Production Ready |
+| **Terms of Service** | [https://muzzacky04.github.io/funny-clipper/terms.html](https://muzzacky04.github.io/funny-clipper/terms.html) | Production Ready |
+| **Privacy Policy** | [https://muzzacky04.github.io/funny-clipper/privacy.html](https://muzzacky04.github.io/funny-clipper/privacy.html) | Production Ready |
 
 ---
 
-## 2. Repository Structure
+## 2. Confirmed Application Information
+
+* **Application Name:** Funny Clipper
+* **Application Operator / Maintainer:** Moh Fahmi Muzaki
+* **Contact Email:** [mfmzacky4@gmail.com](mailto:mfmzacky4@gmail.com)
+* **Jurisdiction & Governing Law:** Republic of Indonesia (including compliance with Personal Data Protection Law / Law No. 27 of 2022)
+* **Effective Date:** November 5, 2026
+* **Last Updated:** November 5, 2026
+
+---
+
+## 3. Product Architecture & Actual Publishing Workflow
+
+Funny Clipper operates as a **local Windows desktop application** orchestrated through a **local n8n workflow pipeline**. It is not a centralized SaaS platform.
+
+### Local Processing Components:
+* **FFmpeg:** Executes local video cutting, audio extraction, vertical reformatting, and subtitle burning.
+* **Faster Whisper:** Transcribes speech audio locally on the workstation without transmitting audio to cloud speech vendors.
+* **Ollama:** Analyzes transcripts locally to identify engaging moments and punchlines without sending text to external cloud AI models.
+* **Local n8n:** Orchestrates the multi-stage pipeline on the local machine.
+
+### Publishing Integrations:
+1. **TikTok Content Posting API:**
+   * **Authentication:** TikTok Login Kit (OAuth 2.0).
+   * **Requested Scope:** `video.upload` (no active `video.publish` scope).
+   * **Workflow:** Video clips are uploaded strictly to the creator's **TikTok inbox as drafts**.
+   * **Human-in-the-Loop:** Funny Clipper does not publish publicly on TikTok. Creators must open the official TikTok mobile app to inspect, edit captions, and manually publish.
+   * **Token File:** Stored locally in `secrets/tiktok_token.json`.
+
+2. **YouTube Data API v3:**
+   * **Authentication:** Google OAuth 2.0.
+   * **Requested Scope:** `https://www.googleapis.com/auth/youtube.upload`.
+   * **Workflow:** Video clips are uploaded with **private visibility** (`privacyStatus: "private"`).
+   * **Human-in-the-Loop:** Videos remain private until the creator inspects and publishes or changes visibility in YouTube Studio.
+   * **Google API Services User Data Policy:** Access to Google user data is strictly limited to video uploads requested by the user. Data is never used for advertising, profiling, or resale.
+   * **Token File:** Stored locally in `secrets/youtube_token.json`.
+
+---
+
+## 4. Repository Structure
 
 ```text
 funny-clipper/
-├── index.html              # Professional SaaS homepage & developer introduction
-├── terms.html              # Complete 18-section Terms of Service
-├── privacy.html            # Complete 16-section Privacy Policy for TikTok Developer integration
+├── index.html              # Homepage: Product capabilities, local pipeline & publishing workflow
+├── terms.html              # 18-Section Terms of Service (TikTok & YouTube integrations, Indonesian law)
+├── privacy.html            # 18-Section Privacy Policy (Local processing, Google User Data Policy, UU PDP)
 ├── assets/
 │   ├── css/
-│   │   └── style.css       # Clean, modern, responsive SaaS styling (navy typography, purple/blue accents)
+│   │   └── style.css       # Clean SaaS typography (navy typography, purple/blue accents, responsive)
 │   └── js/
-│       └── main.js         # Accessible navigation toggle, TOC scrollspy, and back-to-top button
-└── README.md               # Repository documentation & pre-launch compliance checklist
+│       └── main.js         # Mobile nav toggle, Table of Contents scrollspy & back-to-top button
+└── README.md               # Repository documentation & compliance summary
 ```
 
 ---
 
-## 3. Product & Integration Overview
+## 5. Audit & Compliance Status
 
-* **Product Description:** Funny Clipper is a video clipping automation tool that helps creators identify interesting or entertaining moments from longer videos, create short-form clips, add synchronized vertical subtitles, and stage selected clips for social media sharing.
-* **TikTok Integration:**
-  * Uses the official TikTok Login Kit for OAuth 2.0 authorization.
-  * Requests the `video.upload` scope.
-  * Uploads selected video clips exclusively to the authenticated creator's **TikTok inbox as drafts**.
-  * **No automatic public publishing:** Creators must manually review, inspect, add tags, and publish drafts within the official TikTok mobile app.
-* **Platform Disclaimer:** Funny Clipper is an independent application and is not affiliated with, endorsed by, sponsored by, or owned by TikTok, ByteDance, Google, or YouTube.
+All initial draft placeholders have been replaced with confirmed application data:
 
----
-
-## 4. Pre-Launch Confirmation Checklist (Required Placeholders)
-
-Before submitting your URLs to TikTok Developer Review, search the codebase for the following placeholders and update them with your confirmed details:
-
-| Placeholder | Meaning / Recommended Action | Files Containing Placeholder |
-|---|---|---|
-| `[OWNER NAME]` | Your legal name or registered entity name | `index.html`, `terms.html`, `privacy.html` |
-| `[CONTACT EMAIL]` | Official support / privacy contact email | `index.html`, `terms.html`, `privacy.html` |
-| `[COUNTRY / JURISDICTION]` | Governing country / state / legal jurisdiction | `index.html`, `terms.html`, `privacy.html` |
-| `[EFFECTIVE DATE]` | Date when policies take legal effect (e.g., `November 5, 2026`) | `terms.html`, `privacy.html` |
-| `[GITHUB_USERNAME]` | Replace with `muzzacky04` in `<link rel="canonical">` and Open Graph tags | `index.html`, `terms.html`, `privacy.html` |
-
-> **Note:** Placeholders are styled with a distinct yellow badge (`.placeholder`) in the HTML so they are easily identifiable in browser previews.
+* [x] **Owner Identity:** Moh Fahmi Muzaki
+* [x] **Contact Email:** `mfmzacky4@gmail.com`
+* [x] **Country / Jurisdiction:** Indonesia (UU PDP Law No. 27 of 2022)
+* [x] **Effective & Last Updated Date:** November 5, 2026
+* [x] **Canonical & Open Graph URLs:** `https://muzzacky04.github.io/funny-clipper/`
+* [x] **YouTube API Integration:** Documented with `https://www.googleapis.com/auth/youtube.upload`, private visibility, and Google User Data Policy Limited Use compliance.
+* [x] **TikTok API Integration:** Documented with `video.upload`, inbox draft destination, and TikTok Login Kit.
+* [x] **Local Execution Boundary:** Accurately documents FFmpeg, Faster Whisper, Ollama, and n8n running locally.
 
 ---
 
-## 5. Technical Facts & Verification Notes
+## 6. Submitting URLs to Developer Portals
 
-* **Local Execution:** Funny Clipper runs locally on Windows workstations. Authentication tokens (`access_token`, `refresh_token`) and media files are stored locally in the user's workspace.
-* **No Unverified Security Claims:** The policies make no unverified claims of military-grade encryption, automated cloud deletion portals, or specialized data certifications (ISO/SOC).
-* **Data Deletion:** The Privacy Policy clearly documents that users can revoke TikTok app permissions directly inside the TikTok mobile application (`Settings and Privacy > Security & Permissions > Manage App Permissions > Remove Access`) and delete local credential files on Windows.
+### For TikTok Developer Review:
+* **Terms of Service URL:** `https://muzzacky04.github.io/funny-clipper/terms.html`
+* **Privacy Policy URL:** `https://muzzacky04.github.io/funny-clipper/privacy.html`
+* **Scope requested:** `video.upload` (inbox draft mode)
 
----
-
-## 6. How to Deploy on GitHub Pages
-
-1. **Commit and Push changes to GitHub:**
-   ```bash
-   git add index.html terms.html privacy.html assets/ README.md
-   git commit -m "feat: implement official legal website for TikTok Developer review"
-   git push origin main
-   ```
-
-2. **Enable GitHub Pages:**
-   * Open your repository on GitHub: `https://github.com/muzzacky04/funny-clipper`
-   * Go to **Settings** &rarr; **Pages** (under the "Code and automation" section).
-   * Under **Build and deployment**:
-     * **Source:** Select `Deploy from a branch`.
-     * **Branch:** Select `main` branch and `/ (root)` folder.
-     * Click **Save**.
-
-3. **Verify Deployment:**
-   * Within 1–3 minutes, GitHub Pages will deploy your site at:
-     * `https://muzzacky04.github.io/funny-clipper/`
-     * `https://muzzacky04.github.io/funny-clipper/terms.html`
-     * `https://muzzacky04.github.io/funny-clipper/privacy.html`
+### For Google Cloud Console / YouTube API Verification:
+* **Application Homepage:** `https://muzzacky04.github.io/funny-clipper/`
+* **Privacy Policy URL:** `https://muzzacky04.github.io/funny-clipper/privacy.html`
+* **Terms of Service URL:** `https://muzzacky04.github.io/funny-clipper/terms.html`
+* **Authorized redirect URIs (local desktop app):** `http://127.0.0.1:8080`
 
 ---
 
-## 7. Submitting to TikTok Developer Portal
+## 7. Deployment Commands
 
-When creating or updating your app in the [TikTok for Developers Portal](https://developers.tiktok.com/):
+To deploy updates to GitHub Pages:
 
-1. **Terms of Service URL:**
-   ```text
-   https://muzzacky04.github.io/funny-clipper/terms.html
-   ```
-2. **Privacy Policy URL:**
-   ```text
-   https://muzzacky04.github.io/funny-clipper/privacy.html
-   ```
-3. **Requested Scope:**
-   * `video.upload` (Content Posting API - inbox draft upload)
-4. **App Category / Description:**
-   * Video Editing / Utility tool facilitating draft uploads for creator review.
+```powershell
+# Review git status
+git status
+
+# Stage updated legal files
+git add index.html terms.html privacy.html assets/ README.md
+
+# Commit revisions
+git commit -m "docs: audit and update legal website for TikTok and YouTube API compliance"
+
+# Push to GitHub
+git push origin main
+```

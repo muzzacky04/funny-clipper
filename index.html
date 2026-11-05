@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Funny Clipper — Automated Video Clipping & Publishing Tool</title>
-  <meta name="description" content="Funny Clipper is a video clipping automation tool that helps users identify interesting moments from longer videos, create short-form clips, add subtitles, and prepare selected clips for social media publishing.">
+  <title>Funny Clipper — Automated Video Clipping &amp; Publishing Tool</title>
+  <meta name="description" content="Funny Clipper is a video clipping automation tool that helps creators identify interesting moments from longer videos, create short-form clips with subtitles, and prepare them for TikTok inbox drafts and YouTube private uploads.">
   
-  <!-- Canonical Placeholder for GitHub Pages -->
-  <!-- Replace [GITHUB_USERNAME] with your actual GitHub username upon deployment -->
-  <link rel="canonical" href="https://[GITHUB_USERNAME].github.io/funny-clipper/">
+  <!-- Canonical URL for GitHub Pages -->
+  <link rel="canonical" href="https://muzzacky04.github.io/funny-clipper/">
   
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Funny Clipper — Automated Video Clipping & Publishing Tool">
-  <meta property="og:description" content="Identify interesting moments from longer videos, create short-form clips, add subtitles, and prepare clips for social media publishing.">
+  <meta property="og:title" content="Funny Clipper — Automated Video Clipping &amp; Publishing Tool">
+  <meta property="og:description" content="Identify interesting moments from longer videos, create short-form clips, add subtitles, and prepare clips for TikTok drafts and YouTube private uploads.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://[GITHUB_USERNAME].github.io/funny-clipper/">
+  <meta property="og:url" content="https://muzzacky04.github.io/funny-clipper/">
   <meta property="og:site_name" content="Funny Clipper">
   
   <!-- Favicon (Inline SVG Data URI) -->
@@ -51,7 +50,7 @@
           <li><a href="terms.html" class="nav-link">Terms of Service</a></li>
           <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
           <li>
-            <a href="terms.html#contact" class="nav-cta">
+            <a href="terms.html#section-18" class="nav-cta">
               <span>Contact</span>
             </a>
           </li>
@@ -68,11 +67,11 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 18c-3.75-1-6.9-4.75-7-9V8.3l7-3.89 7 3.89V11c-.1 4.25-3.25 8-7 9z"/>
           </svg>
-          Developer &amp; Legal Center
+          Developer &amp; Legal Documentation
         </div>
         <h1 class="hero-title">Automated Video Clipping &amp; Draft Preparation</h1>
         <p class="hero-subtitle">
-          Funny Clipper is a video clipping automation tool that helps users identify interesting or entertaining moments from longer videos, create short-form clips, add subtitles, and prepare selected clips for social media publishing.
+          Funny Clipper is a video clipping automation tool that helps creators identify interesting or entertaining moments from longer videos, create short-form vertical clips, add synchronized subtitles, and prepare selected clips for social media publishing on TikTok and YouTube.
         </p>
         <div class="hero-actions">
           <a href="terms.html" class="btn btn-primary">Review Terms of Service</a>
@@ -85,8 +84,8 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Core Capabilities</h2>
-          <p>Designed to streamline video editing workflows while keeping full publishing control in user hands.</p>
+          <h2>Core Capabilities &amp; Architecture</h2>
+          <p>Local AI and media processing engineered for creator privacy, full transparency, and human-in-the-loop control.</p>
         </div>
 
         <div class="card-grid">
@@ -100,9 +99,9 @@
                 <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
               </svg>
             </div>
-            <h3>Automated Moment Detection</h3>
+            <h3>Local AI Moment Detection</h3>
             <p>
-              Funny Clipper analyzes source video material to locate highlights, humorous clips, and engaging segments based on audio or visual pacing cues.
+              Funny Clipper analyzes source video segments locally using Faster Whisper for speech transcription and Ollama for intelligent highlight detection, identifying entertaining moments without relying on centralized cloud AI services.
             </p>
           </div>
 
@@ -114,9 +113,9 @@
                 <line x1="8" y1="13" x2="14" y2="13"></line>
               </svg>
             </div>
-            <h3>Automated Subtitling</h3>
+            <h3>Local FFmpeg Video Rendering</h3>
             <p>
-              The tool renders accurate, synchronized subtitle overlays suitable for vertical mobile video consumption, improving accessibility and audience comprehension.
+              Video slicing, aspect ratio adaptation, and synchronized subtitle burning are executed locally using FFmpeg on your Windows workstation. Source video media is processed on your machine before any upload is initiated.
             </p>
           </div>
 
@@ -128,9 +127,9 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </div>
-            <h3>Draft to TikTok Inbox</h3>
+            <h3>Dual Publishing Destinations</h3>
             <p>
-              Integrated via the official TikTok Content Posting API using the <code>video.upload</code> scope. Videos arrive directly in your TikTok inbox as drafts for final manual review.
+              Supports publishing to TikTok via Content Posting API (inbox drafts via <code>video.upload</code>) and YouTube via YouTube Data API v3 (private video upload). Neither integration performs automatic public publishing.
             </p>
           </div>
         </div>
@@ -141,78 +140,105 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <h2>Workflow &amp; Human-in-the-Loop Review</h2>
-          <p>Every step of the clipping and uploading lifecycle is transparent, user-controlled, and audited.</p>
+          <h2>End-to-End Processing &amp; Publishing Workflow</h2>
+          <p>Every step of the workflow gives the creator complete visibility, review capability, and publishing authority.</p>
         </div>
 
         <div class="workflow-grid">
           <div class="workflow-step">
             <div class="step-number">1</div>
-            <h3>Source Ingestion</h3>
-            <p>User designates or provides a source video for processing. Users must hold all necessary rights and licenses for the media they supply.</p>
+            <h3>Source Video Ingestion</h3>
+            <p>The creator provides a source video for processing. Users are legally responsible for holding all necessary rights and licenses for the media they input.</p>
           </div>
 
           <div class="workflow-step">
             <div class="step-number">2</div>
-            <h3>Highlight &amp; Subtitle Generation</h3>
-            <p>Funny Clipper identifies candidate segments, cuts short-form clips, and creates synchronized vertical subtitles.</p>
+            <h3>Local Transcription &amp; AI Analysis</h3>
+            <p>Faster Whisper transcribes speech audio, and local Ollama evaluates comedic or engaging segments locally on the workstation.</p>
           </div>
 
           <div class="workflow-step">
             <div class="step-number">3</div>
-            <h3>User Review &amp; Selection</h3>
-            <p>The user inspects the candidate clips locally, verifies editorial quality, copyright compliance, and chooses which clips to upload.</p>
+            <h3>Local Clip &amp; Subtitle Rendering</h3>
+            <p>FFmpeg cuts selected candidates, generates vertical short-form clips, and burns formatted subtitle overlays to local output folders.</p>
           </div>
 
           <div class="workflow-step">
             <div class="step-number">4</div>
-            <h3>Inbox Draft Upload</h3>
-            <p>Selected clips are transmitted to the user's authenticated TikTok account inbox as private drafts. Funny Clipper never publishes publicly on its own.</p>
+            <h3>User Review &amp; Selection</h3>
+            <p>The creator inspects rendered clips locally, verifies editorial and copyright compliance, and explicitly chooses which clips to publish.</p>
           </div>
 
           <div class="workflow-step">
             <div class="step-number">5</div>
-            <h3>Final Publication in TikTok</h3>
-            <p>The creator opens the TikTok mobile application, inspects the draft video, adds captions/tags, and manually presses Publish.</p>
+            <h3>Draft / Private Upload</h3>
+            <p>
+              <strong>TikTok:</strong> Transmitted to the user's TikTok inbox as drafts.<br>
+              <strong>YouTube:</strong> Transmitted to the user's channel with private visibility.
+            </p>
+          </div>
+
+          <div class="workflow-step">
+            <div class="step-number">6</div>
+            <h3>Manual Final Publication</h3>
+            <p>The creator opens the TikTok app or YouTube Studio, verifies metadata and privacy settings, and manually initiates publication.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TikTok Integration Architecture -->
+    <!-- Platform Integrations & Publishing Distinction -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <h2>TikTok Developer Integration Details</h2>
-          <p>Technical transparency for users, reviewers, and developer platform auditors.</p>
+          <h2>Platform Integration Architecture</h2>
+          <p>Clear operational boundaries for third-party developer integrations.</p>
         </div>
 
         <div class="card-grid">
           <div class="feature-card">
-            <h3>Login Kit &amp; OAuth 2.0</h3>
+            <h3>TikTok Integration (Inbox Drafts)</h3>
             <p>
-              Users authenticate explicitly through TikTok's official OAuth 2.0 authorization dialog. Funny Clipper requests only the least privilege necessary to complete the draft upload operation.
+              Funny Clipper uses TikTok Login Kit for OAuth 2.0 authorization and the Content Posting API under the <code>video.upload</code> scope.
             </p>
+            <ul>
+              <li>Uploads arrive in the creator's TikTok inbox as <strong>drafts</strong>.</li>
+              <li>Does not support automatic public publishing (no active <code>video.publish</code> scope).</li>
+              <li>Creator must review, caption, and publish inside the TikTok app.</li>
+              <li>Credentials stored locally in <code>secrets/tiktok_token.json</code>.</li>
+            </ul>
           </div>
 
           <div class="feature-card">
-            <h3>Content Posting API (<code>video.upload</code>)</h3>
+            <h3>YouTube Integration (Private Uploads)</h3>
             <p>
-              Funny Clipper uses the TikTok Content Posting API with the <code>video.upload</code> scope strictly to stage user-selected videos in the creator's TikTok inbox as drafts.
+              Funny Clipper integrates with the YouTube Data API v3 using Google OAuth 2.0 under the <code>https://www.googleapis.com/auth/youtube.upload</code> scope.
             </p>
+            <ul>
+              <li>Uploads clips with <strong>private visibility</strong> (<code>privacyStatus: "private"</code>).</li>
+              <li>Does not publish videos publicly automatically.</li>
+              <li>Creator inspects and adjusts visibility through YouTube Studio.</li>
+              <li>Credentials stored locally in <code>secrets/youtube_token.json</code>.</li>
+            </ul>
           </div>
 
           <div class="feature-card">
-            <h3>Local Execution &amp; Credential Control</h3>
+            <h3>Local Orchestration &amp; Security</h3>
             <p>
-              Funny Clipper operates as a local Windows application. Authentication tokens reside on the user's local operating system filesystem. Users retain full control to delete local credentials or revoke access at any time.
+              Funny Clipper runs on the user's Windows environment using a local n8n workflow pipeline.
             </p>
+            <ul>
+              <li>No centralized SaaS backend or hosted user database is maintained.</li>
+              <li>External network requests occur only for OAuth and publishing calls.</li>
+              <li>Users retain full custody of local tokens and output directories.</li>
+              <li>Tokens can be deleted locally or revoked on platform dashboards.</li>
+            </ul>
           </div>
         </div>
 
         <div class="callout callout-info" style="margin-top: 2.5rem;">
           <p>
-            <strong>Note on Automated Publishing:</strong> Funny Clipper does not provide automatic public publishing. All uploaded media requires manual creator inspection and publication within the official TikTok application. No claims of viral reach, view counts, monetization, or algorithmic favorability are made.
+            <strong>Human-in-the-Loop Guarantee:</strong> Funny Clipper does not provide automated public publishing to either TikTok or YouTube. Every uploaded clip is staged as an inbox draft (TikTok) or private video (YouTube), requiring manual creator inspection and publication. No guarantees of viral reach, view counts, or monetization are made.
           </p>
         </div>
       </div>
@@ -232,7 +258,7 @@
               <span class="badge">Legal Document</span>
               <h3>Terms of Service</h3>
               <p>
-                Outlines the contractual terms, acceptable use policies, copyright responsibilities, third-party platform terms (TikTok and YouTube), disclaimers of warranty, and limitation of liability.
+                Outlines contractual terms, acceptable use policies, copyright responsibilities, third-party platform conditions (TikTok Content Posting API and YouTube Data API v3), disclaimers of warranty, and limitation of liability under Indonesian law.
               </p>
             </div>
             <a href="terms.html" class="btn btn-secondary" style="margin-top: 1.5rem;">Read Terms of Service &rarr;</a>
@@ -243,7 +269,7 @@
               <span class="badge">Legal Document</span>
               <h3>Privacy Policy</h3>
               <p>
-                Details how data is collected, how the TikTok Login Kit and Content Posting API process information, local token storage, user data deletion procedures, and revocation workflows.
+                Details local media processing (FFmpeg, Faster Whisper, Ollama, n8n), TikTok Login Kit, YouTube Data API v3, Google API Services User Data Policy compliance, local token management, and data deletion workflows under Indonesia's Personal Data Protection Law (Law No. 27 of 2022).
               </p>
             </div>
             <a href="privacy.html" class="btn btn-secondary" style="margin-top: 1.5rem;">Read Privacy Policy &rarr;</a>
@@ -281,7 +307,7 @@
             <span>Funny Clipper</span>
           </a>
           <p>
-            Automated video clipping and subtitle tool assisting creators with short-form clip generation and draft preparation for social media publishing.
+            Automated video clipping and subtitle tool assisting creators with short-form clip generation and draft/private staging for TikTok and YouTube.
           </p>
         </div>
 
@@ -290,27 +316,28 @@
           <ul class="footer-links">
             <li><a href="terms.html">Terms of Service</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html#copyright">Copyright Responsibilities</a></li>
-            <li><a href="privacy.html#deletion">Data Deletion &amp; Revocation</a></li>
+            <li><a href="terms.html#section-7">Copyright Responsibilities</a></li>
+            <li><a href="privacy.html#section-11">Data Deletion &amp; Revocation</a></li>
           </ul>
         </div>
 
         <div class="footer-nav-col">
           <h4>Developer &amp; Support</h4>
           <ul class="footer-links">
-            <li><a href="terms.html#tiktok">TikTok Integration Details</a></li>
-            <li><a href="privacy.html#tiktok-permissions">TikTok Permissions &amp; Scopes</a></li>
-            <li><a href="terms.html#contact">Contact Legal &amp; Support</a></li>
+            <li><a href="terms.html#section-5">TikTok Integration Details</a></li>
+            <li><a href="terms.html#section-6">YouTube Integration Details</a></li>
+            <li><a href="privacy.html#section-8">YouTube API &amp; Google User Data</a></li>
+            <li><a href="terms.html#section-18">Contact Legal &amp; Support</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>
-          &copy; <span id="current-year">2026</span> Funny Clipper. All rights reserved.
+          &copy; 2026 Funny Clipper. All rights reserved.
         </div>
         <div>
-          Operator: <span class="placeholder">[OWNER NAME]</span> &bull; Jurisdiction: <span class="placeholder">[COUNTRY / JURISDICTION]</span>
+          Operator: Moh Fahmi Muzaki &bull; Jurisdiction: Indonesia &bull; Contact: <a href="mailto:mfmzacky4@gmail.com">mfmzacky4@gmail.com</a>
         </div>
       </div>
     </div>
@@ -319,4 +346,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
