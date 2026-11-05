@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Funny Clipper</title>
+  <meta name="description" content="Official Privacy Policy for Funny Clipper, detailing data handling, local storage, TikTok Login Kit and Content Posting API integration.">
+  
+  <!-- Canonical Placeholder for GitHub Pages -->
+  <link rel="canonical" href="https://[GITHUB_USERNAME].github.io/funny-clipper/privacy.html">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Privacy Policy — Funny Clipper">
+  <meta property="og:description" content="Privacy Policy explaining data handling, TikTok OAuth scopes, and local storage architecture for Funny Clipper.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://[GITHUB_USERNAME].github.io/funny-clipper/privacy.html">
+  <meta property="og:site_name" content="Funny Clipper">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'%3E%3Cpath d='M19.5 7.5L14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7.5zM14 3.5l4 4H14V3.5zM10.5 17.5v-7l5.5 3.5-5.5 3.5z'/%3E%3C/svg%3E">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Funny Clipper Home">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4 6.5C4 5.12 5.12 4 6.5 4h11C18.88 4 20 5.12 20 6.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C5.12 20 4 18.88 4 17.5v-11zm6 3v5l4.5-2.5L10 9.5z"/>
+          </svg>
+        </span>
+        <span>Funny Clipper</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="terms.html" class="nav-link">Terms of Service</a></li>
+          <li><a href="privacy.html" class="nav-link active">Privacy Policy</a></li>
+          <li><a href="#section-16" class="nav-cta"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Legal Document Header -->
+  <section class="legal-header">
+    <div class="container">
+      <div class="badge">Privacy Documentation</div>
+      <h1>Privacy Policy</h1>
+      <div class="legal-header-meta">
+        <span><strong>Effective Date:</strong> <span class="placeholder">[EFFECTIVE DATE]</span></span>
+        <span>&bull;</span>
+        <span><strong>Last Updated:</strong> <span class="placeholder">[EFFECTIVE DATE]</span></span>
+        <span>&bull;</span>
+        <span><strong>Scope:</strong> Funny Clipper Desktop Tool &amp; TikTok Integration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Content Area -->
+  <main class="legal-container">
+    <div class="legal-content-wrapper">
+      
+      <!-- Table of Contents Sidebar -->
+      <aside class="legal-toc-sidebar" aria-label="Table of Contents">
+        <div class="toc-title">Table of Contents</div>
+        <ul class="toc-list">
+          <li class="toc-item"><a href="#section-1" class="toc-link">1. Introduction</a></li>
+          <li class="toc-item"><a href="#section-2" class="toc-link">2. Information We Collect</a></li>
+          <li class="toc-item"><a href="#section-3" class="toc-link">3. TikTok Login Kit</a></li>
+          <li class="toc-item"><a href="#section-4" class="toc-link">4. TikTok Permissions &amp; Scopes</a></li>
+          <li class="toc-item"><a href="#section-5" class="toc-link">5. How We Use Information</a></li>
+          <li class="toc-item"><a href="#section-6" class="toc-link">6. Video &amp; Media Processing</a></li>
+          <li class="toc-item"><a href="#section-7" class="toc-link">7. TikTok Content Posting API</a></li>
+          <li class="toc-item"><a href="#section-8" class="toc-link">8. Local Credential Storage</a></li>
+          <li class="toc-item"><a href="#section-9" class="toc-link">9. Data Sharing &amp; Third Parties</a></li>
+          <li class="toc-item"><a href="#section-10" class="toc-link">10. Data Retention</a></li>
+          <li class="toc-item"><a href="#section-11" class="toc-link">11. Data Deletion &amp; Revocation</a></li>
+          <li class="toc-item"><a href="#section-12" class="toc-link">12. Security Measures</a></li>
+          <li class="toc-item"><a href="#section-13" class="toc-link">13. International Transfers</a></li>
+          <li class="toc-item"><a href="#section-14" class="toc-link">14. Children's Privacy</a></li>
+          <li class="toc-item"><a href="#section-15" class="toc-link">15. Changes to This Policy</a></li>
+          <li class="toc-item"><a href="#section-16" class="toc-link">16. Contact Information</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Privacy Article -->
+      <article class="legal-article">
+        
+        <div class="key-highlights-box">
+          <h3>Key Privacy Facts</h3>
+          <ul>
+            <li><strong>Local Architecture:</strong> Funny Clipper is primarily configured as a local Windows application. There is no centralized user registration database or hosted tracking backend maintained by us.</li>
+            <li><strong>TikTok OAuth Scope:</strong> We request the <code>video.upload</code> scope strictly to transmit your selected clips to your TikTok account as private inbox drafts.</li>
+            <li><strong>No Direct Public Publishing:</strong> Uploads land in your TikTok inbox. You maintain complete editorial discretion to publish or discard drafts within the official TikTok application.</li>
+            <li><strong>Local Token Responsibility:</strong> OAuth tokens and configuration secrets are retained locally on your computer. You must protect these files and avoid sharing them.</li>
+            <li><strong>Straightforward Revocation:</strong> You can revoke TikTok access at any time via your TikTok mobile app security settings and delete local credentials from your computer.</li>
+          </ul>
+        </div>
+
+        <!-- Section 1 -->
+        <section id="section-1" class="legal-section">
+          <h2>
+            1. Introduction
+            <a href="#section-1" class="section-anchor" aria-label="Link to Section 1">#</a>
+          </h2>
+          <p>
+            This Privacy Policy explains how Funny Clipper (&ldquo;Application,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), operated by <span class="placeholder">[OWNER NAME]</span>, collects, processes, and protects information when you use our video clipping tool and its integrations, including the TikTok Developer integration.
+          </p>
+          <p>
+            We take creator privacy and platform transparency seriously. We adhere to the principle of data minimization: we only process information that is technically required to analyze video clips, generate subtitles, and upload drafts to your connected TikTok inbox upon your explicit instruction.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section-2" class="legal-section">
+          <h2>
+            2. Information We Collect
+            <a href="#section-2" class="section-anchor" aria-label="Link to Section 2">#</a>
+          </h2>
+          <p>
+            Funny Clipper collects and processes only the minimum data required for its functionality:
+          </p>
+          <ul>
+            <li>
+              <strong>Video Content &amp; Metadata:</strong> Video files, audio streams, file paths, and timestamps selected or supplied by you for clipping and transcription.
+            </li>
+            <li>
+              <strong>Third-Party Authentication Data:</strong> OAuth 2.0 access tokens, refresh tokens, token expiration timestamps, and authorized scope identifiers returned by TikTok during the authorization flow.
+            </li>
+            <li>
+              <strong>Application Configuration Settings:</strong> Local user preferences, clipping duration thresholds, subtitle formatting options, and local directory configurations.
+            </li>
+            <li>
+              <strong>Operational Logs:</strong> Local runtime and diagnostic logs generated on your machine to troubleshoot clipping, audio extraction, or API upload errors.
+            </li>
+          </ul>
+          <p>
+            Funny Clipper does <em>not</em> collect user passwords, credit card details, government identification numbers, or unauthorized profile data.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section-3" class="legal-section">
+          <h2>
+            3. Information Processed Through TikTok Login Kit
+            <a href="#section-3" class="section-anchor" aria-label="Link to Section 3">#</a>
+          </h2>
+          <p>
+            When you choose to connect Funny Clipper to TikTok, the authentication process is handled directly through TikTok&rsquo;s official OAuth 2.0 Login Kit.
+          </p>
+          <p>
+            You are redirected to TikTok&rsquo;s official authorization dialog in your web browser. Funny Clipper never sees, collects, or stores your TikTok password or login credentials. Upon granting permission, TikTok returns an authorization code which Funny Clipper exchanges for access and refresh tokens.
+          </p>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="section-4" class="legal-section">
+          <span id="tiktok-permissions"></span>
+          <h2>
+            4. TikTok Permissions and Scopes
+            <a href="#section-4" class="section-anchor" aria-label="Link to Section 4">#</a>
+          </h2>
+          <p>
+            Funny Clipper strictly limits requested scopes to what is technically necessary to perform its advertised function:
+          </p>
+          <ul>
+            <li>
+              <code>video.upload</code>: This permission enables Funny Clipper to upload your selected video clip to your TikTok account as an inbox draft. This scope does not provide Funny Clipper with access to your private direct messages, your payment details, or the ability to publish publicly without your review.
+            </li>
+          </ul>
+          <p>
+            We do not request scopes to read your follower lists, private messages, user interaction feeds, or modify unrelated account settings.
+          </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="section-5" class="legal-section">
+          <h2>
+            5. How We Use Information
+            <a href="#section-5" class="section-anchor" aria-label="Link to Section 5">#</a>
+          </h2>
+          <p>
+            Information processed by Funny Clipper is used exclusively for the following operational purposes:
+          </p>
+          <ul>
+            <li>Analyzing designated source videos to identify interesting highlights and segment boundaries.</li>
+            <li>Transcribing speech and rendering synchronized subtitle overlays.</li>
+            <li>Formatting, cutting, and exporting vertical short-form video clips.</li>
+            <li>Authenticating API requests made to TikTok on your behalf using valid OAuth tokens.</li>
+            <li>Initiating draft uploads to your TikTok inbox via the Content Posting API.</li>
+            <li>Displaying local error diagnostics and upload status within the application interface.</li>
+          </ul>
+          <p>
+            We do not sell, rent, monetize, or use your data or video content for marketing, advertising profiling, or behavioral targeting.
+          </p>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="section-6" class="legal-section">
+          <h2>
+            6. Video and Media Processing
+            <a href="#section-6" class="section-anchor" aria-label="Link to Section 6">#</a>
+          </h2>
+          <p>
+            Funny Clipper processes video media to generate short clips and synchronized subtitles. Regarding the processing architecture:
+          </p>
+          <ul>
+            <li>
+              Video clipping, cutting, and rendering operations execute primarily using video processing tools (such as FFmpeg) configured on your local Windows system.
+            </li>
+            <li>
+              Depending on the transcription or detection features configured within your specific environment, subtitle transcription or highlight detection may rely on local speech models or external transcription services/APIs. Where external APIs or speech services are utilized, only the audio or video segments necessary to perform transcription are submitted.
+            </li>
+            <li>
+              Users should review their specific application configuration and external API keys to confirm whether optional third-party speech services are active.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="section-7" class="legal-section">
+          <h2>
+            7. TikTok Content Posting API
+            <a href="#section-7" class="section-anchor" aria-label="Link to Section 7">#</a>
+          </h2>
+          <p>
+            Funny Clipper uses the official TikTok Content Posting API under the <code>video.upload</code> scope.
+          </p>
+          <div class="callout callout-info">
+            <p>
+              <strong>Inbox Draft Destination:</strong> Videos transferred via the Content Posting API are deposited strictly into your authenticated TikTok account&rsquo;s inbox as <em>drafts</em>. They are not posted publicly to your followers or the For You feed by Funny Clipper.
+            </p>
+          </div>
+          <p>
+            Once a draft is uploaded, the publishing process is completely under your manual control inside the official TikTok mobile app. You may inspect the video, apply TikTok native audio, adjust caption text, set privacy parameters (e.g., Public, Friends, Only Me), or choose to delete the draft.
+          </p>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="section-8" class="legal-section">
+          <h2>
+            8. Local Credential and Token Storage
+            <a href="#section-8" class="section-anchor" aria-label="Link to Section 8">#</a>
+          </h2>
+          <p>
+            Funny Clipper operates as a local Windows application. Authentication tokens received from TikTok (access tokens and refresh tokens) and local configuration parameters are stored on your local operating system drive.
+          </p>
+          <div class="callout callout-warning">
+            <p>
+              <strong>User Responsibility for Local Security:</strong> Local credential files are stored in plain or system-level configuration files on your workstation. We do not represent or guarantee that credentials are encrypted beyond the protections provided by your local Windows filesystem and user account permissions.
+            </p>
+          </div>
+          <p>
+            You must safeguard your workstation, apply operating system updates, maintain password protection on your Windows user account, and refrain from sharing your local project directory or credential files with untrusted parties.
+          </p>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="section-9" class="legal-section">
+          <h2>
+            9. Data Sharing and Third-Party Services
+            <a href="#section-9" class="section-anchor" aria-label="Link to Section 9">#</a>
+          </h2>
+          <p>
+            We do not share your personal data with third-party data brokers, advertising networks, or analytics providers.
+          </p>
+          <p>
+            Data is transmitted only to the third-party platforms you explicitly choose to connect:
+          </p>
+          <ul>
+            <li>
+              <strong>TikTok (ByteDance Ltd.):</strong> When you authenticate and upload clips, video payloads and OAuth tokens are transmitted directly to TikTok endpoints. TikTok processes this data in accordance with the <a href="https://www.tiktok.com/legal/page/row/privacy-policy/en" target="_blank" rel="noopener noreferrer">TikTok Privacy Policy</a>.
+            </li>
+            <li>
+              <strong>YouTube (Google LLC):</strong> If you import source media from YouTube, your interaction is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+            </li>
+          </ul>
+          <p>
+            Funny Clipper&rsquo;s developer does not operate an intermediary server to intercept, copy, or retain your uploaded video files.
+          </p>
+        </section>
+
+        <!-- Section 10 -->
+        <section id="section-10" class="legal-section">
+          <h2>
+            10. Data Retention
+            <a href="#section-10" class="section-anchor" aria-label="Link to Section 10">#</a>
+          </h2>
+          <p>
+            Because Funny Clipper functions locally:
+          </p>
+          <ul>
+            <li>
+              <strong>OAuth Tokens:</strong> Retained locally on your machine until they expire, until you refresh them, or until you manually remove the credential files.
+            </li>
+            <li>
+              <strong>Generated Video Clips &amp; Subtitles:</strong> Stored in your local output folder until you choose to delete them.
+            </li>
+            <li>
+              <strong>TikTok Drafts:</strong> Governed by TikTok&rsquo;s internal retention policies once transmitted to your TikTok inbox.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 11 -->
+        <section id="section-11" class="legal-section">
+          <span id="deletion"></span>
+          <h2>
+            11. Data Deletion and Revocation of Access
+            <a href="#section-11" class="section-anchor" aria-label="Link to Section 11">#</a>
+          </h2>
+          <p>
+            You maintain full sovereignty over your data and platform connections. Funny Clipper does not require an automated web deletion portal because data is stored locally under your direct custody.
+          </p>
+          <h3>How to Revoke TikTok Authorization:</h3>
+          <ol>
+            <li>Open the official <strong>TikTok application</strong> on your mobile device.</li>
+            <li>Navigate to <strong>Profile</strong> &rarr; tap the menu icon (<strong>&equiv;</strong>) in the top-right corner.</li>
+            <li>Select <strong>Settings and Privacy</strong>.</li>
+            <li>Go to <strong>Security &amp; Permissions</strong> (or <strong>Security</strong>).</li>
+            <li>Tap <strong>Manage App Permissions</strong>.</li>
+            <li>Locate <strong>Funny Clipper</strong> in the authorized apps list and tap <strong>Remove Access</strong> (Revoke).</li>
+          </ol>
+
+          <h3>How to Delete Local Data &amp; Credentials:</h3>
+          <p>
+            To remove all traces of Funny Clipper authentication and media from your Windows device:
+          </p>
+          <ol>
+            <li>Delete the local token storage file (e.g., <code>token.json</code>, <code>credentials.json</code>, or <code>.env</code>) containing your OAuth access tokens.</li>
+            <li>Delete any generated video clips, subtitle files, and temporary cache folders created in your output directories.</li>
+            <li>Uninstall or delete the Funny Clipper application directory.</li>
+          </ol>
+
+          <p>
+            For privacy inquiries or assistance regarding data deletion, you may email us directly at <span class="placeholder">[CONTACT EMAIL]</span>.
+          </p>
+        </section>
+
+        <!-- Section 12 -->
+        <section id="section-12" class="legal-section">
+          <h2>
+            12. Security Measures
+            <a href="#section-12" class="section-anchor" aria-label="Link to Section 12">#</a>
+          </h2>
+          <p>
+            We implement reasonable measures to support software integrity:
+          </p>
+          <ul>
+            <li>API communications with TikTok servers are conducted strictly over encrypted HTTPS/TLS channels.</li>
+            <li>The Application does not transmit credentials to any third-party telemetry server.</li>
+            <li>We do not claim specialized security certifications (such as ISO 27001 or SOC 2) or proprietary hardware-level encryption guarantees. Users are responsible for securing their host operating system.</li>
+          </ul>
+        </section>
+
+        <!-- Section 13 -->
+        <section id="section-13" class="legal-section">
+          <h2>
+            13. International Data Transfers
+            <a href="#section-13" class="section-anchor" aria-label="Link to Section 13">#</a>
+          </h2>
+          <p>
+            When you upload drafts through the TikTok Content Posting API, your video data and authentication tokens are transferred to servers operated by TikTok and its global affiliates, which may be located in the United States, Singapore, or other jurisdictions.
+          </p>
+          <p>
+            Please review <a href="https://www.tiktok.com/legal/page/row/privacy-policy/en" target="_blank" rel="noopener noreferrer">TikTok&rsquo;s Privacy Policy</a> to understand their international data transfer safeguards.
+          </p>
+        </section>
+
+        <!-- Section 14 -->
+        <section id="section-14" class="legal-section">
+          <h2>
+            14. Children&rsquo;s Privacy
+            <a href="#section-14" class="section-anchor" aria-label="Link to Section 14">#</a>
+          </h2>
+          <p>
+            Funny Clipper is not directed toward children under the age of 13 (or under 16 in certain jurisdictions), and we do not knowingly solicit or collect personal information from children.
+          </p>
+          <p>
+            If you become aware that a child has provided personal information or used the Application in violation of age requirements, please contact us at <span class="placeholder">[CONTACT EMAIL]</span> so that appropriate remedial action can be taken.
+          </p>
+        </section>
+
+        <!-- Section 15 -->
+        <section id="section-15" class="legal-section">
+          <h2>
+            15. Changes to This Privacy Policy
+            <a href="#section-15" class="section-anchor" aria-label="Link to Section 15">#</a>
+          </h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect changes in our operational practices, technical capabilities, or applicable platform requirements.
+          </p>
+          <p>
+            When changes are made, we will update the &ldquo;Last Updated&rdquo; date at the top of this document. We encourage you to review this page periodically to stay informed of our privacy practices.
+          </p>
+        </section>
+
+        <!-- Section 16 -->
+        <section id="section-16" class="legal-section">
+          <span id="contact"></span>
+          <h2>
+            16. Contact Information
+            <a href="#section-16" class="section-anchor" aria-label="Link to Section 16">#</a>
+          </h2>
+          <p>
+            If you have questions, comments, or requests regarding this Privacy Policy, your rights, or data handling practices, please contact:
+          </p>
+          <div class="callout callout-info">
+            <p><strong>Application:</strong> Funny Clipper</p>
+            <p><strong>Maintainer / Data Controller:</strong> <span class="placeholder">[OWNER NAME]</span></p>
+            <p><strong>Privacy Contact:</strong> <span class="placeholder">[CONTACT EMAIL]</span></p>
+            <p><strong>Jurisdiction:</strong> <span class="placeholder">[COUNTRY / JURISDICTION]</span></p>
+            <p><strong>Repository:</strong> <a href="https://github.com/muzzacky04/funny-clipper" target="_blank" rel="noopener noreferrer">https://github.com/muzzacky04/funny-clipper</a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-disclaimer-box">
+        <p>
+          <strong>Platform Disclaimer:</strong> Funny Clipper is an independent application and is not affiliated with, endorsed by, sponsored by, or owned by TikTok, ByteDance, Google, YouTube, or any of their parent or subsidiary entities. All product names, logos, and brands are property of their respective owners.
+        </p>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 6.5C4 5.12 5.12 4 6.5 4h11C18.88 4 20 5.12 20 6.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C5.12 20 4 18.88 4 17.5v-11zm6 3v5l4.5-2.5L10 9.5z"/>
+              </svg>
+            </span>
+            <span>Funny Clipper</span>
+          </a>
+          <p>
+            Automated video clipping and subtitle tool assisting creators with short-form clip generation and draft preparation for social media publishing.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Legal &amp; Policy</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html#section-7">Copyright Responsibilities</a></li>
+            <li><a href="#section-11">Data Deletion &amp; Revocation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Developer &amp; Support</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html#section-5">TikTok Integration Details</a></li>
+            <li><a href="#section-4">TikTok Permissions &amp; Scopes</a></li>
+            <li><a href="#section-16">Contact Legal &amp; Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Funny Clipper. All rights reserved.
+        </div>
+        <div>
+          Operator: <span class="placeholder">[OWNER NAME]</span> &bull; Jurisdiction: <span class="placeholder">[COUNTRY / JURISDICTION]</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
